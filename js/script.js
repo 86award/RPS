@@ -1,8 +1,3 @@
-let playerSelection = prompt("Please enter your choice: Rock, Paper, Scissors.")
-
-let computerSelection = getComputerChoice();
-console.log(computerSelection);
-
 function getComputerChoice()
 {
     let selection = Math.random();
@@ -70,4 +65,15 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
-playRound(playerSelection, computerSelection);
+function game()
+{
+    for (let index = 0; index < 5; index++)
+    {
+        let playerSelection = prompt("Please enter your choice: Rock, Paper, Scissors.")
+        let computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        playRound(playerSelection, computerSelection);
+    }   
+}
+
+game();
